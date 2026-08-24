@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    uses: Websonette/.github/.github/workflows/php-package.yml@main
+    with:
+      php-versions: '["8.3", "8.4", "8.5"]'
+
