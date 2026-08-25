@@ -1,5 +1,5 @@
 {
-  "name": "websonette/web-application",
+  "name": "websonette/latte-application",
   "description": "Foundations for server-rendered Nette web applications using Latte.",
   "type": "library",
   "license": "MIT",
@@ -10,7 +10,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Websonette\\WebApplication\\": "src/"
+      "Websonette\\LatteApplication\\": "src/"
     }
   },
   "scripts": {

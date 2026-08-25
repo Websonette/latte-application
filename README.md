@@ -1,4 +1,4 @@
-# Websonette Web Application
+# Websonette Latte Application
 
 Shared foundations for classic server-rendered Nette applications using Latte. This package is intended for HTML web applications, not JSON APIs.
 
@@ -29,7 +29,7 @@ Localization, security, and larger UI capabilities should remain optional packag
 The package is not published yet. After the first stable release it will be installable through Composer:
 
 ```bash
-composer require websonette/web-application
+composer require websonette/latte-application
 ```
 
 ## Development
@@ -44,5 +44,5 @@ The package follows the organization-wide [contribution guidelines](https://gith
 
 ## License
 
-Websonette Web Application is licensed under the MIT License.
+Websonette Latte Application is licensed under the MIT License.
 
