@@ -1,0 +1,40 @@
+{varType Websonette\WebApplication\Page\PageContext $pageContext}
+
+<title n:snippet="title">{$pageContext->getTitle() ?? ''}</title>
+
+<meta
+    name="description"
+    content="{$pageContext->getDescription() ?? ''}"
+>
+
+<meta
+    name="robots"
+    content="{$pageContext->getRobots()}"
+>
+
+<link
+    rel="canonical"
+    href="{$pageContext->getCanonicalUrl() ?? ''}"
+>
+
+{foreach $pageContext->getAlternateUrls() as $language => $url}
+    <link
+        rel="alternate"
+        hreflang="{$language}"
+        href="{$url}"
+    >
+{/foreach}
+
+{foreach $pageContext->getMeta() as $name => $content}
+    <meta
+        name="{$name}"
+        content="{$content}"
+    >
+{/foreach}
+
+{foreach $pageContext->getProperties() as $property => $content}
+    <meta
+        property="{$property}"
+        content="{$content}"
+    >
+{/foreach}

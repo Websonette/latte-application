@@ -1,0 +1,31 @@
+{layout $componentShell}
+
+{block content}
+    <nav n:if="$breadcrumbs->count() > 0" class="breadcrumbs" aria-label="Breadcrumb">
+        <ol class="breadcrumbs__list">
+            <li
+                n:foreach="$breadcrumbs as $breadcrumb"
+                n:class="breadcrumbs__item, $iterator->isLast() ? breadcrumbs__item--current"
+                n:attr="aria-current: $iterator->isLast() ? 'page'"
+            >
+                <span
+                    n:if="$breadcrumb['icon'] !== null"
+                    class="breadcrumbs__icon"
+                    data-icon="{$breadcrumb['icon']}"
+                    aria-hidden="true"
+                ></span>
+                {if $iterator->isLast()}
+                    <span class="breadcrumbs__title">{$breadcrumb['title']}</span>
+                {else}
+                    <a class="breadcrumbs__link" href="{$breadcrumb['url']}">
+                        <span class="breadcrumbs__title">{$breadcrumb['title']}</span>
+                    </a>
+                {/if}
+                <span
+                    n:if="$breadcrumb['description'] !== null"
+                    class="breadcrumbs__description"
+                >{$breadcrumb['description']}</span>
+            </li>
+        </ol>
+    </nav>
+{/block}

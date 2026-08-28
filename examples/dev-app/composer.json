@@ -1,0 +1,21 @@
+{
+  "name": "websonette/latte-application-dev-app",
+  "description": "Development application for websonette/latte-application.",
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "php": "^8.3",
+    "nette/robot-loader": "^4.0",
+    "symfony/dotenv": "^7.4",
+    "tracy/tracy": "^2.10",
+    "websonette/latte-application": "^0.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}

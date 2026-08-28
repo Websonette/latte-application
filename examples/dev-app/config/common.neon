@@ -1,0 +1,19 @@
+extensions:
+    translation: Contributte\Translation\DI\TranslationExtension
+    websonette.latte-application: Websonette\LatteApplication\DI\LatteApplicationExtension
+
+application:
+    mapping:
+        *: App\Presentation\*Presenter
+
+translation:
+    localeResolvers: []
+    dirs:
+        - %rootDir%/app/translations
+    locales:
+        default: en
+        fallback:
+            - en
+
+services:
+    router: App\Router\RouterFactory::createRouter()

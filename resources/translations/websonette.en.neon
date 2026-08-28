@@ -1,0 +1,6 @@
+latte-application:
+    flash:
+        success: Done
+        warning: Warning
+        error: Error
+        info: Information

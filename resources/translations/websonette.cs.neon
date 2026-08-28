@@ -1,0 +1,6 @@
+latte-application:
+    flash:
+        success: Hotovo
+        warning: Upozornění
+        error: Chyba
+        info: Informace

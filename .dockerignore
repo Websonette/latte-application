@@ -1,0 +1,7 @@
+.git
+.phpunit.cache
+.phpstan.cache
+vendor
+examples/dev-app/vendor
+examples/dev-app/log
+examples/dev-app/temp

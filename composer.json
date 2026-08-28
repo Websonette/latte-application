@@ -5,19 +5,42 @@
   "license": "MIT",
   "require": {
     "php": "^8.3",
+    "contributte/translation": "^2.0",
     "latte/latte": "^3.0",
-    "nette/application": "^3.2"
+    "nette/application": "^3.3",
+    "nette/bootstrap": "^3.3",
+    "nette/di": "^3.2",
+    "websonette/web-application": "^0.1"
+  },
+  "require-dev": {
+    "phpstan/extension-installer": "^1.4",
+    "phpstan/phpstan": "^2.2",
+    "phpstan/phpstan-nette": "^2.0",
+    "phpunit/phpunit": "^12.0"
   },
   "autoload": {
     "psr-4": {
       "Websonette\\LatteApplication\\": "src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Websonette\\LatteApplication\\Tests\\": "tests/"
+    }
+  },
   "scripts": {
-    "test": "composer validate --strict"
+    "analyse": "phpstan analyse",
+    "tests": "phpunit",
+    "test": [
+      "@composer validate --strict",
+      "@tests",
+      "@analyse"
+    ]
   },
   "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    },
     "sort-packages": true
   }
 }
-

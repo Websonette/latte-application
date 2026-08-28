@@ -1,0 +1,3 @@
+latte-application:
+    flash:
+        success: Done
