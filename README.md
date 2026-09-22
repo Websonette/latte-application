@@ -11,6 +11,7 @@ Reusable foundations for classic server-rendered Nette applications using Latte.
 - **vite/** contains the Latte-specific Vite registry plugin.
 - **tests/** and **tests-js/** contain PHP and TypeScript tests.
 - **docs/frontend-architecture.md** defines repository boundaries and the consuming-application integration.
+- **docs/project-profile/** and **scaffold/profile.json** define the adapter-owned inputs used by Websonette project orchestration.
 - **examples/dev-app/** is a small consuming Nette application.
 - **docker/** and **compose.yaml** provide PHP-FPM and Nginx for local development.
 - **vendor/**, **node_modules/**, and **dist/** are generated and are never committed.
@@ -29,6 +30,8 @@ Application-specific code must not be added to **src/** or **frontend/**. The de
 The same Git repository is intentionally both a Composer package and an npm package. The Vite integration belongs here because its conventions are specific to Latte-rendered HTML and Naja; it is not a universal SPA frontend.
 
 The package intentionally leaves project-specific debug mode, Tracy setup, environment variables, configuration files, timezone, concrete controls, business components, and visual design in the consuming application. See [Frontend architecture](docs/frontend-architecture.md) for exact ownership and integration.
+
+The project profile is descriptive tooling, not another runtime layer. The adapter declares its own Nette/Latte/Naja/Vite, layout, deployment, testing, and security decisions; the `create-project` skill in `websonette/web-application` only orchestrates those references.
 
 ## Breadcrumbs
 

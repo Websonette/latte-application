@@ -1,0 +1,10 @@
+---
+description: Apply the Websonette Nette, Latte, Naja, and Vite application profile.
+alwaysApply: true
+---
+
+This project is a consuming Nette/Latte application. Preserve dependency direction `project -> websonette/latte-application -> websonette/web-application`.
+
+Keep presenters, routes, concrete controls, templates, business components, entrypoints, styles, and design decisions in this project. Use the adapter for generic Latte integration, browser lifecycle, Naja rehydration, and its Vite registry. Do not copy adapter internals into the project or move project-specific behavior into generic layers.
+
+Progressively enhance server-rendered HTML. Make browser handlers safe under repeated hydration and publish AJAX page metadata only for real navigation.
