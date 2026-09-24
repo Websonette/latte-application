@@ -10,6 +10,8 @@
   },
   "files": [
     "dist",
+    "docs",
+    "scaffold",
     "LICENSE",
     "README.md"
   ],

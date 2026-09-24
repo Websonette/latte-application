@@ -1,0 +1,32 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Websonette/web-application/main/scaffold/profile.schema.json",
+  "schemaVersion": 1,
+  "id": "latte",
+  "name": "Nette and Latte server-rendered application",
+  "version": "0.1.0",
+  "repository": "Websonette/latte-application",
+  "extends": {
+    "repository": "Websonette/web-application",
+    "contractVersion": 1
+  },
+  "packages": {
+    "composer": [
+      "websonette/latte-application:^0.1"
+    ],
+    "npm": [
+      "@websonette/latte-application:^0.1"
+    ]
+  },
+  "references": [
+    "docs/frontend-architecture.md",
+    "docs/project-profile/architecture.md",
+    "docs/project-profile/project-layout.md",
+    "docs/project-profile/latte.md",
+    "docs/project-profile/naja-vite.md",
+    "docs/project-profile/docker.md",
+    "docs/project-profile/deployment.md",
+    "docs/project-profile/testing.md",
+    "docs/project-profile/security.md"
+  ],
+  "rule": "scaffold/rules/latte-application.mdc"
+}
